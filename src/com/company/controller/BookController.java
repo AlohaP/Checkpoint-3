@@ -3,7 +3,6 @@ package com.company.controller;
 import com.company.dao.BookDAO;
 import com.company.view.View;
 import com.company.model.Book;
-
 import java.sql.SQLException;
 
 public class BookController {
@@ -61,6 +60,4 @@ public class BookController {
             e.printStackTrace();
         }
     }
-
-
 }

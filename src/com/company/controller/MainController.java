@@ -34,8 +34,6 @@ public class MainController {
                 case "6":
                     view.customPrint("Work in proggres");
                     break;
-
-
             }
         }
     }
