@@ -1,5 +1,5 @@
 package com.company.model;
 
-public class BookCreators {
+public abstract class BookCreators {
 
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import com.company.model.Book;
 
-public class BookDAO {
+public class BookDAO implements BookDaoInterface{
 
     private DatabaseConnection database = DatabaseConnection.getInstance();
     private Connection connection = null;
