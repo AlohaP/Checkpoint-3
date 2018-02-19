@@ -2,14 +2,14 @@ package com.company.model;
 
 public class Book {
     private int ISBN;
-    private String author;
+    private int author;
     private String title;
     private String publisher;
     private int publication_year;
     private int price;
-    private String type;
+    private int type;
 
-    public Book(int ISBN, String author, String title, String publisher, int publication_year, int price, String type){
+    public Book(int ISBN, int author, String title, String publisher, int publication_year, int price, int type){
         this.ISBN = ISBN;
         this.author = author;
         this.title = title;
@@ -27,11 +27,11 @@ public class Book {
         this.ISBN = ISBN;
     }
 
-    public String getAuthor() {
+    public int getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(int author) {
         this.author = author;
     }
 
@@ -67,11 +67,11 @@ public class Book {
         this.price = price;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 }

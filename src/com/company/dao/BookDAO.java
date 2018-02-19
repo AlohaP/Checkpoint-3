@@ -10,17 +10,38 @@ public class BookDAO {
     private DatabaseConnection database = DatabaseConnection.getInstance();
     private Connection connection = null;
 
-    public int updateBook(Book book) throws SQLException {
+    public BookDAO(){
+        connection = database.getConnection();
+    }
+
+    public int insertBook(Book book) throws SQLException {
+
+        PreparedStatement preparedInsert = connection.prepareStatement(
+                "INSERT INTO Books (ISBN, author, title, publisher, publication_year, price, type)" +
+                        " VALUES (?,?,?,?,?,?,?)");
+        preparedInsert.setInt(1, book.getISBN());
+        preparedInsert.setInt(2, book.getAuthor());
+        preparedInsert.setString(3, book.getTitle());
+        preparedInsert.setString(4, book.getPublisher());
+        preparedInsert.setInt(5, book.getPublication_year());
+        preparedInsert.setInt(6, book.getPrice());
+        preparedInsert.setInt(7, book.getType());
+        return preparedInsert.executeUpdate();
+    }
+
+
+        public int updateBook(Book book) throws SQLException {
 
         PreparedStatement preparedInsert = connection.prepareStatement(
                 "UPDATE Books SET ISBN=?, author=?, title=?, publisher=?, publication_year=?, price=?, 'type'=? WHERE ISBN=?");
-        preparedInsert.setInt(1, book.getISBN());
-        preparedInsert.setString(2, book.getAuthor());
-        preparedInsert.setString(3, book.getPublisher());
-        preparedInsert.setInt(4, book.getPublication_year());
-        preparedInsert.setInt(5, book.getPrice());
-        preparedInsert.setString(6, book.getType());
-        preparedInsert.setInt(7, book.getISBN()); //checkit
+            preparedInsert.setInt(1, book.getISBN());
+            preparedInsert.setInt(2, book.getAuthor());
+            preparedInsert.setString(3, book.getTitle());
+            preparedInsert.setString(4, book.getPublisher());
+            preparedInsert.setInt(5, book.getPublication_year());
+            preparedInsert.setInt(6, book.getPrice());
+            preparedInsert.setInt(7, book.getType());
+            preparedInsert.setInt(8, book.getISBN()); //checkit
         return preparedInsert.executeUpdate();
     }
 }
