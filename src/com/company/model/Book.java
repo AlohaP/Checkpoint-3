@@ -6,16 +6,16 @@ public class Book {
     private String title;
     private String publisher;
     private int publication_year;
-    private int year;
+    private int price;
     private String type;
 
-    public Book(int ISBN, String author, String title, String publisher, int publication_year, int year, String type){
+    public Book(int ISBN, String author, String title, String publisher, int publication_year, int price, String type){
         this.ISBN = ISBN;
         this.author = author;
         this.title = title;
         this.publisher = publisher; 
         this.publication_year = publication_year;
-        this.year = year;
+        this.price = price;
         this.type = type;
 
     }
@@ -59,12 +59,12 @@ public class Book {
         this.publication_year = publication_year;
     }
 
-    public int getYear() {
-        return year;
+    public int getPrice() {
+        return price;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getType() {
