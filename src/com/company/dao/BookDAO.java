@@ -29,6 +29,13 @@ public class BookDAO {
         return preparedInsert.executeUpdate();
     }
 
+    public int deleteBook(Book book) throws SQLException {
+
+        PreparedStatement preparedInsert = connection.prepareStatement("DELETE FROM Books WHERE title = ?;");
+        preparedInsert.setString(1, book.getTitle());
+        return preparedInsert.executeUpdate();
+
+    }
 
         public int updateBook(Book book) throws SQLException {
 

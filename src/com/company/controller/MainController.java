@@ -23,6 +23,7 @@ public class MainController {
 
                     break;
                 case "3":
+                    bookController.bookToDelete();
                     break;
                 case "4":
 

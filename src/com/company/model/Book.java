@@ -17,9 +17,11 @@ public class Book {
         this.publication_year = publication_year;
         this.price = price;
         this.type = type;
-
     }
 
+    public Book (String title){
+        this.title = title;
+    }
     public int getISBN(){
         return ISBN;
     }

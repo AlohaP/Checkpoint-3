@@ -45,5 +45,12 @@ public class View {
         return new Book( Integer.parseInt(ISBN), Integer.parseInt(author), title, publisher,
                          Integer.parseInt(publication_year), Integer.parseInt(price), Integer.parseInt(type));
     }
-    
+
+    public Book getBookDeleteTitle(){
+        String title = getInput("Enter title of book you want to delete: ");
+        return new Book(title);
+
+    }
 }
+    
+
