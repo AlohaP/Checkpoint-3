@@ -5,11 +5,18 @@ public class Book {
     private String author;
     private String title;
     private String publisher;
-    private String publication_year;
+    private int publication_year;
     private int year;
     private String type;
 
-    public Book(){
+    public Book(int ISBN, String author, String title, String publisher, int publication_year, int year, String type){
+        this.ISBN = ISBN;
+        this.author = author;
+        this.title = title;
+        this.publisher = publisher; 
+        this.publication_year = publication_year;
+        this.year = year;
+        this.type = type;
 
     }
 
@@ -44,11 +51,11 @@ public class Book {
         this.title = title;
     }
 
-    public String getPublication_year() {
+    public int getPublication_year() {
         return publication_year;
     }
 
-    public void setPublication_year(String publication_year) {
+    public void setPublication_year(int publication_year) {
         this.publication_year = publication_year;
     }
 
