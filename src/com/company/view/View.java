@@ -28,6 +28,10 @@ public class View {
         return input;
     }
 
+    public void customPrint(String msg){
+        System.out.println(msg);
+    }
+
     public Book getBookInput(){
 
         String ISBN = getInput("Enter ISBN: ");
@@ -38,8 +42,8 @@ public class View {
         String price = getInput("Enter price amount: ");
         String type = getInput("Enter typeof book: ");
 
-        return new Book( Integer.parseInt(ISBN), author, title, publisher,
-                         Integer.parseInt(publication_year), Integer.parseInt(price), type);
+        return new Book( Integer.parseInt(ISBN), Integer.parseInt(author), title, publisher,
+                         Integer.parseInt(publication_year), Integer.parseInt(price), Integer.parseInt(type));
     }
     
 }
