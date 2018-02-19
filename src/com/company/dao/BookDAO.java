@@ -74,7 +74,7 @@ public class BookDAO implements BookDaoInterface{
             preparedInsert.setInt(5, book.getPublication_year());
             preparedInsert.setInt(6, book.getPrice());
             preparedInsert.setInt(7, book.getType());
-            preparedInsert.setInt(8, book.getISBN()); //checkit
+            preparedInsert.setInt(8, book.getISBN()); //ToDO change to custom_id
         return preparedInsert.executeUpdate();
     }
 }
