@@ -20,20 +20,19 @@ public class MainController {
                     bookController.bookToAdd();
                     break;
                 case "2":
-
+                    view.customPrint("Work in proggres");
                     break;
                 case "3":
                     bookController.bookToDelete();
                     break;
                 case "4":
-
+                    view.customPrint("Work in proggres");
                     break;
                 case "5":
                     bookController.showAllBooks();
-
                     break;
                 case "6":
-
+                    view.customPrint("Work in proggres");
                     break;
 
 
