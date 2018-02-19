@@ -1,6 +1,7 @@
 package com.company.view;
 
 import java.util.Scanner;
+import com.company.model.Book;
 
 public class View {
 
@@ -25,6 +26,20 @@ public class View {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
         return input;
+    }
+
+    public Book getBookInput(){
+
+        String ISBN = getInput("Enter ISBN: ");
+        String author  = getInput("Enter author name: ");
+        String title = getInput( "Enter book title: ");
+        String publisher = getInput( "Enter publisher name: ");
+        String publication_year = getInput( "Enter publication year: ");
+        String price = getInput("Enter price amount: ");
+        String type = getInput("Enter typeof book: ");
+
+        return new Book( Integer.parseInt(ISBN), author, title, publisher,
+                         Integer.parseInt(publication_year), Integer.parseInt(price), type);
     }
     
 }
