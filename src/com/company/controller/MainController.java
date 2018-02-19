@@ -29,6 +29,7 @@ public class MainController {
 
                     break;
                 case "5":
+                    bookController.showAllBooks();
 
                     break;
                 case "6":

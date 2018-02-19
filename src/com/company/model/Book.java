@@ -76,4 +76,9 @@ public class Book {
     public void setType(int type) {
         this.type = type;
     }
+
+
+    public String toString() {
+        return ISBN + ", " + author + ", " + title + ", " + publisher + ", " + publication_year + ", " + price  + ", " +type;
+    }
 }

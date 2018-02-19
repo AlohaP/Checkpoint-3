@@ -51,4 +51,16 @@ public class BookController {
         String status = result > 0 ? "Book deleted." : "Book deletion failed.";
         view.customPrint(status);
     }
+
+    void showAllBooks(){
+        try {
+            for (Book books : bookDao.getAllBooks()) {
+                view.customPrint(books.toString());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
